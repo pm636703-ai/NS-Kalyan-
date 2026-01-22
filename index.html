@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS MATKA APP</title>
+
+<!-- Meta Description -->
+<meta name="description" content="NS MATKA App - Official Android App for fast updates and smooth experience. Trusted by 50,000+ users. Download APK now!">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '2372284623206364'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2372284623206364&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: linear-gradient(180deg,#ffe6ef,#ffd6e8);
+  padding-bottom:90px;
+}
+
+.container{
+  max-width:420px;
+  margin:20px auto;
+  padding:15px;
+  text-align:center;
+}
+
+.badge{
+  background:#ff4f9a;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:30px;
+  font-weight:600;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:25px;
+  padding:25px 20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.logo{
+  width:90px;
+  height:90px;
+  border-radius:22px;
+  margin-bottom:15px;
+}
+
+h1{
+  color:#e6006e;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+p{
+  color:#555;
+  font-size:15px;
+  margin-bottom:22px;
+}
+
+/* 🔥 MAIN DOWNLOAD BUTTON */
+.download-btn{
+  position:relative;
+  overflow:hidden;
+  display:block;
+  width:100%;
+  max-width:360px;
+  margin:0 auto;
+  background:linear-gradient(90deg,#0b5cff,#4f9bff);
+  color:#fff;
+  text-decoration:none;
+  padding:18px 0;
+  border-radius:22px;
+  font-size:20px;
+  font-weight:800;
+  animation:pulse 1.5s infinite;
+}
+
+.download-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-80%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  animation:shine 2.8s infinite;
+}
+
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(11,92,255,0.6); }
+  70%{ box-shadow:0 0 0 18px rgba(11,92,255,0); }
+  100%{ box-shadow:0 0 0 0 rgba(11,92,255,0); }
+}
+
+@keyframes shine{
+  0%{ left:-80%; }
+  100%{ left:120%; }
+}
+
+/* Feature cards */
+.feature{
+  background:#fff;
+  border-radius:18px;
+  padding:16px;
+  margin-top:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+.icon{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+/* Social proof */
+.social-proof{
+  background:#fff;
+  border-radius:20px;
+  padding:20px 15px;
+  margin-top:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.social-proof h2{
+  font-size:18px;
+  color:#e6006e;
+  margin-bottom:12px;
+}
+
+.proof-item{
+  font-size:15px;
+  color:#333;
+  margin:8px 0;
+  font-weight:600;
+}
+
+/* Trust box */
+.trust-box{
+  background:#fff;
+  border-radius:20px;
+  padding:18px;
+  margin-top:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.trust-title{
+  font-size:18px;
+  font-weight:700;
+  color:#e6006e;
+  margin-bottom:10px;
+}
+
+.trust-list{
+  font-size:14px;
+  color:#444;
+  line-height:1.6;
+}
+
+.disclaimer{
+  margin-top:12px;
+  font-size:12px;
+  color:#666;
+  line-height:1.5;
+}
+
+/* 📌 STICKY BAR */
+.sticky-download{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#ffffff;
+  box-shadow:0 -8px 20px rgba(0,0,0,0.15);
+  padding:10px 12px;
+  z-index:999;
+}
+
+.sticky-inner{
+  max-width:420px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.sticky-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Round + glass logo */
+.sticky-logo{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  padding:3px;
+  background:rgba(255,255,255,0.4);
+  backdrop-filter:blur(6px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.sticky-text{
+  font-size:14px;
+  font-weight:800;
+  color:#222;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.verified{
+  color:#1da1f2;
+  font-size:14px;
+}
+
+.sticky-btn{
+  background:#0b5cff;
+  color:#fff;
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:14px;
+  font-weight:700;
+  font-size:15px;
+  transition: transform 0.2s;
+}
+
+.sticky-btn:hover{
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="badge">🔥 MOST TRENDING APP</div>
+
+  <div class="card">
+    <img src="logo.png" class="logo" alt="NS MATKA Android App Logo">
+    <h1>NS MATKA App</h1>
+    <p>Official Android App for smooth experience and fast updates.</p>
+
+    <a href="https://nskalyan.com/download" class="download-btn" id="downloadBtn">
+      ⬇ DOWNLOAD APK
+    </a>
+  </div>
+
+  <div class="feature">
+    <div class="icon">⚡</div>
+    <strong>Fast Results</strong><br>
+    Instant updates
+  </div>
+
+  <div class="feature">
+    <div class="icon">🔒</div>
+    <strong>Secure App</strong><br>
+    Data protected
+  </div>
+
+  <div class="feature">
+    <div class="icon">📱</div>
+    <strong>Android Friendly</strong><br>
+    Smooth performance
+  </div>
+
+  <div class="social-proof">
+    <h2>⭐ Trusted by Users</h2>
+    <div class="proof-item">⭐ 50,000+ Active Users</div>
+    <div class="proof-item">⭐ Daily Result Updates</div>
+    <div class="proof-item">⭐ Trusted by Android Users</div>
+  </div>
+
+  <div class="trust-box">
+    <div class="trust-title">🛡️ Trusted & Safe</div>
+    <div class="trust-list">
+      ✔ Secure Platform<br>
+      ✔ No Fake Claims<br>
+      ✔ Smooth User Experience<br>
+      ✔ Official APK Only
+    </div>
+    <div class="disclaimer">
+      Disclaimer: This app is for informational and entertainment purposes only.
+    </div>
+  </div>
+
+</div>
+
+<!-- STICKY DOWNLOAD BAR -->
+<div class="sticky-download">
+  <div class="sticky-inner">
+    <div class="sticky-left">
+      <img src="logo.png" class="sticky-logo" alt="NS MATKA Logo">
+      <div class="sticky-text">
+        NS MATKA <span class="verified">✔️</span>
+      </div>
+    </div>
+    <a href="https://nskalyan.com/download" class="sticky-btn" id="stickyDownloadBtn">⬇ DOWNLOAD</a>
+  </div>
+</div>
+
+<!-- Lead tracking script -->
+<script>
+  // Track main download button click
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+    fbq('track', 'Lead'); // Fire Lead event
+  });
+
+  // Track sticky download button click
+  document.getElementById('stickyDownloadBtn').addEventListener('click', function() {
+    fbq('track', 'Lead'); // Fire Lead event
+  });
+</script>
+
+</body>
+</html>
